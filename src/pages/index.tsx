@@ -1,11 +1,53 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
+import Head from 'next/head';
+import Image from 'next/image';
+import { Inter } from 'next/font/google';
+import styles from '@/styles/Home.module.css';
+import { ChangeEvent, FormEvent, useState } from 'react';
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] });
+
+interface IForm {
+  name: string;
+  email: string;
+  message: string;
+}
 
 export default function Home() {
+  const [form, setForm] = useState<IForm>({ name: '', email: '', message: '' });
+
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ): void => {
+    const { name, value } = e.target;
+
+    setForm({ ...form, [name]: value });
+  };
+
+  const handleSubmit = (e: FormEvent): void => {
+    e.preventDefault();
+
+    const formData: IForm = {
+      name: form.name,
+      email: form.email,
+      message: form.message,
+    };
+
+    console.log(formData);
+
+    fetch('/api/hello', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((res: any) => res.json())
+      .then((data: any) => console.log(data))
+      .catch((err: any) => console.error(err));
+
+    setForm({ name: '', email: '', message: '' });
+  };
+
   return (
     <>
       <Head>
@@ -38,6 +80,33 @@ export default function Home() {
             </a>
           </div>
         </div>
+
+        {/*  */}
+        <form
+          onSubmit={handleSubmit}
+          style={{ display: 'flex', flexDirection: 'column' }}
+        >
+          <input
+            type="text"
+            name="name"
+            value={form.name}
+            onChange={handleChange}
+          />
+          <input
+            type="email"
+            name="email"
+            value={form.email}
+            onChange={handleChange}
+          />
+          <textarea
+            name="message"
+            rows={7}
+            value={form.message}
+            onChange={handleChange}
+          ></textarea>
+          <button type="submit">Send</button>
+        </form>
+        {/*  */}
 
         <div className={styles.center}>
           <Image
@@ -119,5 +188,5 @@ export default function Home() {
         </div>
       </main>
     </>
-  )
+  );
 }
