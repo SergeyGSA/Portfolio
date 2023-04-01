@@ -32,7 +32,7 @@ export default function Home() {
       message: form.message,
     };
 
-    console.log(formData);
+    // console.log(formData);
 
     fetch('/api/hello', {
       method: 'POST',
