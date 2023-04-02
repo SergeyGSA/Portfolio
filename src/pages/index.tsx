@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import Navbar from '@/components/Navbar'
+import { Hero, Navbar } from '@/components'
 
 export default function Home() {
   return (
@@ -12,21 +12,21 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="relative z-0 bg-primary">
-        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-          <header>
-            <Navbar />
-          </header>
-          {/* <Hero /> */}
-        </div>
-        {/* <About /> */}
-        {/* <Experience /> */}
-        {/* <Tech /> */}
-        {/* <Works /> */}
-        {/* <Feedbacks /> */}
-        <div className="relative z-0">
-          {/* <Contact /> */}
-          {/* <StarsCanvas /> */}
-        </div>
+        <header>
+          <Navbar />
+        </header>
+        <main>
+          <Hero />
+          {/* <About /> */}
+          {/* <Experience /> */}
+          {/* <Tech /> */}
+          {/* <Works /> */}
+          {/* <Feedbacks /> */}
+          <div className="relative z-0">
+            {/* <Contact /> */}
+            {/* <StarsCanvas /> */}
+          </div>
+        </main>
       </div>
     </>
   )
