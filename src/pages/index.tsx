@@ -1,5 +1,7 @@
 import Head from 'next/head'
 
+import Navbar from '@/components/Navbar'
+
 export default function Home() {
   return (
     <>
@@ -9,9 +11,23 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <h1>HELLO WORLD!</h1>
-      </main>
+      <div className="relative z-0 bg-primary">
+        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+          <header>
+            <Navbar />
+          </header>
+          {/* <Hero /> */}
+        </div>
+        {/* <About /> */}
+        {/* <Experience /> */}
+        {/* <Tech /> */}
+        {/* <Works /> */}
+        {/* <Feedbacks /> */}
+        <div className="relative z-0">
+          {/* <Contact /> */}
+          {/* <StarsCanvas /> */}
+        </div>
+      </div>
     </>
   )
 }
