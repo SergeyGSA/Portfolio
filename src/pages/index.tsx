@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import { About, Experience, Feedbacks, Hero, Navbar, Tech, Works } from '@/components'
+import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works } from '@/components'
 
 export default function Home() {
   return (
@@ -23,7 +23,7 @@ export default function Home() {
           <Works />
           <Feedbacks />
           <div className="relative z-0">
-            {/* <Contact /> */}
+            <Contact />
             {/* <StarsCanvas /> */}
           </div>
         </main>
