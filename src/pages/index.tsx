@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import { About, Hero, Navbar } from '@/components'
+import { About, Experience, Hero, Navbar } from '@/components'
 
 export default function Home() {
   return (
@@ -18,7 +18,7 @@ export default function Home() {
         <main>
           <Hero />
           <About />
-          {/* <Experience /> */}
+          <Experience />
           {/* <Tech /> */}
           {/* <Works /> */}
           {/* <Feedbacks /> */}
