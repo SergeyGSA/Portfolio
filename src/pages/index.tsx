@@ -11,6 +11,7 @@ import {
   Tech,
   Works,
 } from '@/components'
+import { styles } from '@/styles/styles'
 
 export default function Home() {
   return (
@@ -37,6 +38,16 @@ export default function Home() {
             <StarsCanvas />
           </div>
         </main>
+        <footer className="grid place-items-center bg-primary py-5">
+          <div className="flex">
+            <span className={styles.sectionSubText}>
+              {new Date().getFullYear().toString()}&nbsp;&nbsp;&nbsp;
+            </span>
+            <p className={styles.sectionSubText}>
+              <span>&#169;</span>&nbsp;copyright
+            </p>
+          </div>
+        </footer>
       </div>
     </>
   )
