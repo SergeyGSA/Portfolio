@@ -1,5 +1,5 @@
 export interface IFormData {
-  name: string
-  email: string
-  message: string
+  readonly name: string
+  readonly email: string
+  readonly message: string
 }
