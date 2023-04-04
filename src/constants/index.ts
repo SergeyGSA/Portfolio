@@ -70,61 +70,61 @@ const services: Array<IService> = [
 ]
 
 export interface ITechnologiesItem {
-  name: string
-  icon: string
+  title: string
+  icon: StaticImageData
 }
 
 const technologies: Array<ITechnologiesItem> = [
   {
-    name: 'HTML 5',
+    title: 'HTML 5',
     icon: html,
   },
   {
-    name: 'CSS 3',
+    title: 'CSS 3',
     icon: css,
   },
   {
-    name: 'JavaScript',
+    title: 'JavaScript',
     icon: javascript,
   },
   {
-    name: 'TypeScript',
+    title: 'TypeScript',
     icon: typescript,
   },
   {
-    name: 'React JS',
+    title: 'React JS',
     icon: reactjs,
   },
   {
-    name: 'Redux Toolkit',
+    title: 'Redux Toolkit',
     icon: redux,
   },
   {
-    name: 'Tailwind CSS',
+    title: 'Tailwind CSS',
     icon: tailwind,
   },
   {
-    name: 'Node JS',
+    title: 'Node JS',
     icon: nodejs,
   },
   {
-    name: 'MongoDB',
+    title: 'MongoDB',
     icon: mongodb,
   },
   {
-    name: 'Three JS',
+    title: 'Three JS',
     icon: threejs,
   },
   {
-    name: 'git',
+    title: 'git',
     icon: git,
   },
   {
-    name: 'figma',
+    title: 'figma',
     icon: figma,
   },
   {
-    name: 'docker',
+    title: 'docker',
     icon: docker,
   },
 ]

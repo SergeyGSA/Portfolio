@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import { About, Experience, Hero, Navbar } from '@/components'
+import { About, Experience, Hero, Navbar, Tech } from '@/components'
 
 export default function Home() {
   return (
@@ -19,7 +19,7 @@ export default function Home() {
           <Hero />
           <About />
           <Experience />
-          {/* <Tech /> */}
+          <Tech />
           {/* <Works /> */}
           {/* <Feedbacks /> */}
           <div className="relative z-0">

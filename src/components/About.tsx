@@ -1,20 +1,15 @@
 import React from 'react'
 import Tilt from 'react-parallax-tilt'
 import { motion } from 'framer-motion'
-import Image, { StaticImageData } from 'next/image'
+import Image from 'next/image'
 
 import { styles } from '@/styles/styles'
 import { IService, services } from '../constants'
 import { fadeIn, textVariant } from '../utils/motion'
 import { SectionWrapper } from '../hoc'
+import { ICardProps } from '@/types'
 
-interface IServiceCardProps {
-  title: string
-  index: number
-  icon: StaticImageData
-}
-
-const ServiceCard: React.FC<IServiceCardProps> = ({ title, index, icon }) => {
+const ServiceCard: React.FC<ICardProps> = ({ title, index, icon }) => {
   return (
     <Tilt className="xs:w-[250px] w-full">
       <motion.div
