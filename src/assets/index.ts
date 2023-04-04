@@ -30,6 +30,10 @@ import carrent from './carrent.webp'
 import jobit from './jobit.webp'
 import tripguide from './tripguide.webp'
 
+import testimonials_1 from './testimonials_1.webp'
+import testimonials_2 from './testimonials_2.webp'
+import testimonials_3 from './testimonials_3.webp'
+
 export {
   logo,
   backend,
@@ -59,4 +63,7 @@ export {
   carrent,
   jobit,
   tripguide,
+  testimonials_1,
+  testimonials_2,
+  testimonials_3,
 }

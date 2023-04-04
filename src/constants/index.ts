@@ -24,6 +24,9 @@ import {
   jobit,
   tripguide,
   threejs,
+  testimonials_1,
+  testimonials_2,
+  testimonials_3,
 } from '../assets'
 
 export interface INavLink {
@@ -198,7 +201,7 @@ export interface ITestimonial {
   name: string
   designation: string
   company: string
-  image: string
+  image: StaticImageData
 }
 
 const testimonials: Array<ITestimonial> = [
@@ -208,7 +211,7 @@ const testimonials: Array<ITestimonial> = [
     name: 'Sara Lee',
     designation: 'CFO',
     company: 'Acme Co',
-    image: 'https://randomuser.me/api/portraits/women/4.jpg',
+    image: testimonials_1,
   },
   {
     testimonial:
@@ -216,7 +219,7 @@ const testimonials: Array<ITestimonial> = [
     name: 'Chris Brown',
     designation: 'COO',
     company: 'DEF Corp',
-    image: 'https://randomuser.me/api/portraits/men/5.jpg',
+    image: testimonials_2,
   },
   {
     testimonial:
@@ -224,7 +227,7 @@ const testimonials: Array<ITestimonial> = [
     name: 'Lisa Wang',
     designation: 'CTO',
     company: '456 Enterprises',
-    image: 'https://randomuser.me/api/portraits/women/6.jpg',
+    image: testimonials_3,
   },
 ]
 
