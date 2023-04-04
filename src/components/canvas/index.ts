@@ -1,5 +1,5 @@
 import EarthCanvas from './Earth'
 import ComputersCanvas from './Computer'
-// import StarsCanvas from "./Stars";
+import StarsCanvas from './Stars'
 
-export { ComputersCanvas, EarthCanvas }
+export { ComputersCanvas, EarthCanvas, StarsCanvas }

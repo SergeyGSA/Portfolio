@@ -31,6 +31,8 @@ const EarthCanvas: React.FC = () => {
           minPolarAngle={Math.PI / 2}
         />
         <Earth />
+
+        <Preload all />
       </Suspense>
     </Canvas>
   )
