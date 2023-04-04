@@ -21,7 +21,7 @@ const ProjectCard: React.FC<IProject & { index: number }> = ({
     <motion.div variants={fadeIn('up', 'spring', index * 0.5, 0.75)}>
       <Tilt className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full">
         <div className="relative w-full h-[230px]">
-          <Image src={image} alt={name} className="w-auto h-auto object-cover rounded-2xl" />
+          <Image src={image} alt={name} className="w-full h-full object-cover rounded-2xl" />
 
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
             <div
