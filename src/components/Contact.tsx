@@ -3,7 +3,7 @@ import { useState, useRef } from 'react'
 import { motion } from 'framer-motion'
 
 import { styles } from '@/styles/styles'
-// import { EarthCanvas } from './canvas'
+import { EarthCanvas } from './canvas'
 import { SectionWrapper } from '../hoc'
 import { slideIn } from '../utils/motion'
 
@@ -107,7 +107,7 @@ const Contact: React.FC = () => {
         variants={slideIn('right', 'tween', 0.2, 1)}
         className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
       >
-        {/* <EarthCanvas /> */}
+        <EarthCanvas />
       </motion.div>
     </div>
   )
