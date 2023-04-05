@@ -58,7 +58,7 @@ const Contact: React.FC = () => {
         >
           {() => (
             <Form>
-              <label className="flex flex-col">
+              <label className="flex flex-col mt-10">
                 <span className="text-white font-medium mb-4">Your Name</span>
                 <Field
                   name="name"
@@ -66,9 +66,13 @@ const Contact: React.FC = () => {
                   className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
                 />
               </label>
-              <ErrorMessage name="name" component="span" />
+              <ErrorMessage
+                name="name"
+                component="span"
+                className="flex text-red-700 font-bold mt-1"
+              />
 
-              <label className="flex flex-col">
+              <label className="flex flex-col mt-10">
                 <span className="text-white font-medium mb-4">Your Email</span>
                 <Field
                   name="email"
@@ -76,9 +80,13 @@ const Contact: React.FC = () => {
                   className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
                 />
               </label>
-              <ErrorMessage name="email" component="span" />
+              <ErrorMessage
+                name="email"
+                component="span"
+                className="flex text-red-700 font-bold mt-1"
+              />
 
-              <label className="flex flex-col">
+              <label className="flex flex-col mt-10">
                 <span className="text-white font-medium mb-4">Your Message</span>
                 <Field
                   as="textarea"
@@ -88,14 +96,20 @@ const Contact: React.FC = () => {
                   className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium resize-none"
                 />
               </label>
-              <ErrorMessage name="message" component="span" />
+              <ErrorMessage
+                name="message"
+                component="span"
+                className="flex text-red-700 font-bold mt-1"
+              />
 
-              <button
-                type="submit"
-                className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
-              >
-                {loading ? 'Sending...' : 'Send'}
-              </button>
+              <div>
+                <button
+                  type="submit"
+                  className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl mt-10"
+                >
+                  {loading ? 'Sending...' : 'Send'}
+                </button>
+              </div>
             </Form>
           )}
         </Formik>
