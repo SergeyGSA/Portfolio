@@ -15,10 +15,7 @@ const messageSchema = Yup.object({
     .min(3, 'Email must be at least 3 characters long')
     .max(50, 'Max email length is 50')
     .matches(EMAIL_REGEX, 'Invalid email'),
-  message: Yup.string()
-    .required('Message is required')
-    .min(3, 'Message must be at least 3 characters long')
-    .max(50, 'Max message length is 50'),
+  message: Yup.string().required('Message is required').max(2000, 'Max message length is 2000'),
 })
 
 export { messageSchema }

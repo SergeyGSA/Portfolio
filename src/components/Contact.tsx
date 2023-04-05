@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ChangeEvent } from 'react'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import axios from 'axios'
@@ -25,6 +25,8 @@ const Contact: React.FC = () => {
     message: '',
   }
 
+  const [messageLength, setMessageLength] = useState<number>(0)
+
   const [loading, setLoading] = useState<boolean>(false)
 
   const handleSubmit = async (
@@ -33,8 +35,12 @@ const Contact: React.FC = () => {
   ): Promise<void> => {
     setLoading(true)
 
+    const trimmedValues = Object.fromEntries(
+      Object.entries(values).map(([key, value]) => [key, value.trim()]),
+    )
+
     await axios
-      .post(API_URL, values)
+      .post(API_URL, trimmedValues)
       .then((res: any) => console.log(res))
       .catch((err: any) => console.log(err))
 
@@ -56,7 +62,7 @@ const Contact: React.FC = () => {
           onSubmit={handleSubmit}
           validationSchema={messageSchema}
         >
-          {() => (
+          {(formikProps) => (
             <Form>
               <label className="flex flex-col mt-10">
                 <span className="text-white font-medium mb-4">Your Name</span>
@@ -91,16 +97,24 @@ const Contact: React.FC = () => {
                 <Field
                   as="textarea"
                   rows={7}
+                  maxLength="2000"
                   name="message"
                   placeholder="What do you want to say?"
-                  className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium resize-none"
+                  className="bg-tertiary py-4 px-6  mb-1 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium resize-none"
+                  onChange={(event: ChangeEvent<HTMLTextAreaElement>) => {
+                    formikProps.setFieldValue('message', event.target.value)
+                    setMessageLength(event.target.value.length)
+                  }}
                 />
               </label>
               <ErrorMessage
                 name="message"
                 component="span"
-                className="flex text-red-700 font-bold mt-1"
+                className="flex text-red-700 font-bold"
               />
+              <span className="text-secondary text-sm font-light">
+                {!formikProps.errors.message ? `Symbols used ${messageLength}/2000` : null}
+              </span>
 
               <div>
                 <button
