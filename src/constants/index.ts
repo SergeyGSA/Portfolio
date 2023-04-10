@@ -119,15 +119,15 @@ const technologies: Array<ITechnologiesItem> = [
     icon: threejs,
   },
   {
-    title: 'git',
+    title: 'Git',
     icon: git,
   },
   {
-    title: 'figma',
+    title: 'Figma',
     icon: figma,
   },
   {
-    title: 'docker',
+    title: 'Docker',
     icon: docker,
   },
 ]

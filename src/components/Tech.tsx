@@ -22,10 +22,12 @@ const TechCard: React.FC<ICardProps> = ({ title, index, icon }) => {
             scale: 1,
             speed: 450,
           }}
-          className="bg-tertiary rounded-full py-5 px-12 w-[196px] min-h-[200px] flex justify-evenly items-center flex-col"
+          className="bg-tertiary rounded-full py-5 px-0 xs:px-12 w-[116px] xs:w-[196px] min-h-[120px] xs:min-h-[200px] flex justify-evenly items-center flex-col"
         >
-          <Image src={icon} alt={title} className="w-16 h-16 object-contain" />
-          <h3 className="text-white text-[20px] font-bold text-center">{title}</h3>
+          <Image src={icon} alt={title} className="w-8 h-8 xs:w-16 xs:h-16 object-contain" />
+          <h3 className="text-white text-[12px] sm:text-[14px] md:text-[20px] font-bold text-center">
+            {title}
+          </h3>
         </div>
       </motion.div>
     </Tilt>
