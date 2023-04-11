@@ -21,10 +21,9 @@ import tailwind from './tech/tailwind.webp'
 import typescript from './tech/typescript.webp'
 import threejs from './tech/threejs.svg'
 
-import meta from './company/meta.webp'
-import shopify from './company/shopify.webp'
-import starbucks from './company/starbucks.webp'
-import tesla from './company/tesla.webp'
+import exadel from './company/exadel.svg'
+import freelancehunt from './company/freelancehunt.svg'
+import infopulse from './company/infopulse.svg'
 
 import carrent from './carrent.webp'
 import jobit from './jobit.webp'
@@ -56,10 +55,9 @@ export {
   tailwind,
   typescript,
   threejs,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
+  exadel,
+  freelancehunt,
+  infopulse,
   carrent,
   jobit,
   tripguide,
