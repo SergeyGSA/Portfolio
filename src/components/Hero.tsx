@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
   return (
     <section className="relative w-full h-screen mx-auto bg-hero-pattern bg-cover bg-no-repeat bg-center">
       <div
-        className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}
+        className={`${styles.paddingX} absolute inset-0 top-[70px] sm:top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}
       >
         <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-[#915eff]" />
@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
 
       <ComputersCanvas />
 
-      <div className="absolute xs:bottom-10 bottom-16 w-full flex justify-center items-center">
+      <div className="absolute xs:bottom-10 bottom-4 w-full flex justify-center items-center">
         <a href="#about" aria-label="Section about">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
             <motion.div
