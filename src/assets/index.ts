@@ -16,10 +16,10 @@ import javascript from './tech/javascript.webp'
 import mongodb from './tech/mongodb.webp'
 import nodejs from './tech/nodejs.webp'
 import reactjs from './tech/reactjs.webp'
-import redux from './tech/redux.webp'
 import tailwind from './tech/tailwind.webp'
 import typescript from './tech/typescript.webp'
-import threejs from './tech/threejs.svg'
+import angular from './tech/angular.svg'
+import mssql from './tech/sql.svg'
 
 import exadel from './company/exadel.svg'
 import freelancehunt from './company/freelancehunt.svg'
@@ -51,10 +51,10 @@ export {
   mongodb,
   nodejs,
   reactjs,
-  redux,
   tailwind,
   typescript,
-  threejs,
+  angular,
+  mssql,
   exadel,
   freelancehunt,
   infopulse,

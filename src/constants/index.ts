@@ -9,17 +9,17 @@ import {
   html,
   css,
   reactjs,
-  redux,
   tailwind,
   nodejs,
   mongodb,
   git,
   figma,
   docker,
+  angular,
+  mssql,
   carrent,
   jobit,
   tripguide,
-  threejs,
   testimonials_1,
   testimonials_2,
   testimonials_3,
@@ -94,16 +94,16 @@ const technologies: Array<ITechnologiesItem> = [
     icon: typescript,
   },
   {
-    title: 'React JS',
-    icon: reactjs,
-  },
-  {
-    title: 'Redux Toolkit',
-    icon: redux,
+    title: 'Angular',
+    icon: angular,
   },
   {
     title: 'Tailwind CSS',
     icon: tailwind,
+  },
+  {
+    title: 'React JS',
+    icon: reactjs,
   },
   {
     title: 'Node JS',
@@ -112,10 +112,6 @@ const technologies: Array<ITechnologiesItem> = [
   {
     title: 'MongoDB',
     icon: mongodb,
-  },
-  {
-    title: 'Three JS',
-    icon: threejs,
   },
   {
     title: 'Git',
@@ -128,6 +124,10 @@ const technologies: Array<ITechnologiesItem> = [
   {
     title: 'Docker',
     icon: docker,
+  },
+  {
+    title: 'MS SQL',
+    icon: mssql,
   },
 ]
 
