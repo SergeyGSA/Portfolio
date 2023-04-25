@@ -19,7 +19,6 @@ import reactjs from './tech/reactjs.webp'
 import tailwind from './tech/tailwind.webp'
 import typescript from './tech/typescript.webp'
 import angular from './tech/angular.svg'
-import mssql from './tech/sql.svg'
 
 import exadel from './company/exadel.svg'
 import freelancehunt from './company/freelancehunt.svg'
@@ -54,7 +53,6 @@ export {
   tailwind,
   typescript,
   angular,
-  mssql,
   exadel,
   freelancehunt,
   infopulse,

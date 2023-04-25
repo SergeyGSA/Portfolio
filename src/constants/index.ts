@@ -16,7 +16,6 @@ import {
   figma,
   docker,
   angular,
-  mssql,
   carrent,
   jobit,
   tripguide,
@@ -124,10 +123,6 @@ const technologies: Array<ITechnologiesItem> = [
   {
     title: 'Docker',
     icon: docker,
-  },
-  {
-    title: 'MS SQL',
-    icon: mssql,
   },
 ]
 
