@@ -33,7 +33,7 @@ const ExperienceCard: React.FC<{ experience: IExperienceItem }> = ({ experience 
   >
     <div>
       <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
-      <div className="flex">
+      <div className="flex justify-between">
         <p className="text-secondary text-[16px] font-semibold" style={{ margin: 0 }}>
           {experience.company_name}
         </p>
@@ -41,7 +41,7 @@ const ExperienceCard: React.FC<{ experience: IExperienceItem }> = ({ experience 
           <Image
             src={experience.company_logo}
             alt={experience.company_name}
-            className="block ml-5"
+            className="w-auto h-6 object-cover"
           />
         ) : (
           ''
