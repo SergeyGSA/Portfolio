@@ -13,7 +13,7 @@ const ServiceCard: React.FC<ICardProps> = ({ title, index, icon }) => {
   return (
     <Tilt className="xs:w-[250px] w-full">
       <motion.div
-        variants={fadeIn('right', 'spring', 0.5 * index, 0.75)}
+        variants={fadeIn('right', 'spring', 0.75 * index, 0.75)}
         className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
       >
         <div
@@ -41,7 +41,7 @@ const About: React.FC = () => {
       </motion.div>
 
       <motion.p
-        variants={fadeIn('', '', 0.1, 1)}
+        variants={fadeIn('', '', 0.5, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
         I&#39;m a software developer with experience in TypeScript and JavaScript, frameworks like

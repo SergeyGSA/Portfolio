@@ -16,6 +16,7 @@ const ExperienceCard: React.FC<{ experience: IExperienceItem }> = ({ experience 
     contentArrowStyle={{ borderRight: '7px solid #232631' }}
     date={experience.date}
     iconStyle={{ background: experience.iconBg }}
+    intersectionObserverProps={{ rootNMargin: '100px 100px 100px 100px' }}
     icon={
       <div className="flex justify-center items-center w-full h-full">
         <Image

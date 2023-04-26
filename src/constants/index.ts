@@ -53,19 +53,19 @@ export interface IService {
 
 const services: Array<IService> = [
   {
-    title: 'Web Developer',
+    title: 'Angular Developer',
     icon: web,
   },
   {
-    title: 'React Native Developer',
+    title: 'React Developer',
     icon: mobile,
   },
   {
-    title: 'Backend Developer',
+    title: 'NodeJs Developer',
     icon: backend,
   },
   {
-    title: 'Content Creator',
+    title: '.Net Developer',
     icon: creator,
   },
 ]

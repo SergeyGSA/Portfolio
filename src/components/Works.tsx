@@ -18,7 +18,7 @@ const ProjectCard: React.FC<IProject & { index: number }> = ({
   source_code_link,
 }) => {
   return (
-    <motion.div variants={fadeIn('up', 'spring', index * 0.5, 0.75)}>
+    <motion.div variants={fadeIn('up', 'spring', index * 0.75, 0.75)}>
       <Tilt className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full">
         <div className="relative w-full h-[230px]">
           <Image src={image} alt={name} className="w-full h-auto object-cover rounded-2xl" />
