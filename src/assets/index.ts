@@ -21,8 +21,9 @@ import typescript from './tech/typescript.webp'
 import angular from './tech/angular.svg'
 
 import exadel from './company/exadel.svg'
+import exadel_logo from './company/exadel_logo.webp'
 import freelancehunt from './company/freelancehunt.svg'
-import infopulse from './company/infopulse.svg'
+import infopulse_logo from './company/infopulse_logo.svg'
 
 import carrent from './carrent.webp'
 import jobit from './jobit.webp'
@@ -54,8 +55,9 @@ export {
   typescript,
   angular,
   exadel,
+  exadel_logo,
   freelancehunt,
-  infopulse,
+  infopulse_logo,
   carrent,
   jobit,
   tripguide,

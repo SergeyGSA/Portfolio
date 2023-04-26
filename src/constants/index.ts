@@ -23,8 +23,9 @@ import {
   testimonials_2,
   testimonials_3,
   exadel,
+  exadel_logo,
   freelancehunt,
-  infopulse,
+  infopulse_logo,
 } from '../assets'
 
 export interface INavLink {
@@ -129,7 +130,8 @@ const technologies: Array<ITechnologiesItem> = [
 export interface IExperienceItem {
   title: string
   company_name: string
-  icon: StaticImageData
+  company_logo?: StaticImageData
+  icon?: StaticImageData
   iconBg: string
   date: string
   points: Array<string>
@@ -139,6 +141,7 @@ const experiences: Array<IExperienceItem> = [
   {
     title: 'Angular Developer',
     company_name: 'Exadel',
+    company_logo: exadel_logo,
     icon: exadel,
     iconBg: '#E6DEDD',
     date: 'Jun 2021 - Aug 2021',
@@ -163,7 +166,8 @@ const experiences: Array<IExperienceItem> = [
   {
     title: 'Angular Developer',
     company_name: 'Infopulse',
-    icon: infopulse,
+    company_logo: infopulse_logo,
+    // icon: '',
     iconBg: '#E6DEDD',
     date: 'Oct 2022 - Present',
     points: [
