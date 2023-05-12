@@ -1,13 +1,34 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
 
-type Data = {
-  name: string
+import validationService from './services/validation.service'
+import telegramService from './services/telegram.service'
+
+interface IData {
+  success: boolean
 }
 
-export default function handler(
+interface IError {
+  type: string
+  error?: unknown
+}
+
+export default async function formHandler(
   req: NextApiRequest,
-  res: NextApiResponse<Data>
+  res: NextApiResponse<IData | IError>,
 ) {
-  res.status(200).json({ name: 'John Doe' })
+  const { body } = req
+
+  if (req.method !== 'POST') {
+    res.status(405).json({ type: 'Method not allowed' })
+    return
+  }
+
+  try {
+    const validMessage = await validationService(body)
+    await telegramService(validMessage)
+
+    res.status(200).json({ success: true })
+  } catch (error: any) {
+    res.status(400).json({ type: 'Validation error', error })
+  }
 }
