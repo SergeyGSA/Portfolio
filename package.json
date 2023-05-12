@@ -26,6 +26,7 @@
     "react-parallax-tilt": "^1.7.122",
     "react-router-dom": "^6.10.0",
     "react-vertical-timeline-component": "^3.6.0",
+    "sharp": "^0.32.1",
     "three": "^0.151.2",
     "typescript": "5.0.2",
     "yup": "^1.0.2"
